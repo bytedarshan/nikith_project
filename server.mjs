@@ -386,10 +386,11 @@ async function api(req,res,url){
 export async function requestListener(req,res){
  try{
    let reqUrl = req.url || '/';
-   if (req.headers['x-matched-path']) {
-     const qIndex = reqUrl.indexOf('?');
-     const query = qIndex >= 0 ? reqUrl.slice(qIndex) : '';
-     reqUrl = req.headers['x-matched-path'] + query;
+   if (reqUrl === '/api/index.js' || reqUrl === '/api') {
+     if (req.query?.path) {
+       const segments = Array.isArray(req.query.path) ? req.query.path.join('/') : req.query.path;
+       reqUrl = '/api/' + segments;
+     }
    }
    const host = req.headers['x-forwarded-host'] || req.headers.host || 'localhost';
    const proto = req.headers['x-forwarded-proto'] || 'http';
