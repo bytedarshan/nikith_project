@@ -1,0 +1,9 @@
+.git
+.github
+scripts/
+*.md
+*.txt
+Dockerfile
+.dockerignore
+.env
+.env.example

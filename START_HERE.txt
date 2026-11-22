@@ -1,0 +1,20 @@
+SAME SPOT V6 — INSTANT HEATMAPS + FIXED ADMIN
+
+IF YOU ARE NEW TO CODING
+1. Open this exact folder in Antigravity. (If you already have a project with user data, use ANTIGRAVITY_UPDATE_EXISTING_PROJECT.txt instead of replacing it.)
+2. Open Antigravity agent chat, and say: "Read README.md and START_HERE.txt. I am a beginner. Configure and run SAME SPOT V6, preserve data and explain anything that needs permission."
+3. Ask Antigravity to run: npm run test:all
+4. For local admin: ask Antigravity to run npm run setup:admin and help you choose a private password.
+5. Start with npm start. Game: http://localhost:3000  Admin: http://localhost:3000/admin
+6. Need tomorrow's five new games? Use PUZZLE_CREATION_PROMPT.txt, then upload five separate PNG images in the admin studio.
+
+WHAT CHANGED
+- Tap > confirm > INSTANT heatmap reveal > immediate score/reward > Next Puzzle.
+- Under five genuine taps per puzzle, show clearly marked estimated spots based on editorial hotspots; at five real taps switch to observed crowd responses.
+- Admin supports duplicating a complete day to a new future date, then editing all five slots.
+- Fixed priority sliders: backend now accepts values up to 10 and normalizes.
+- More helpful admin errors / save confirmations.
+- .env file is loaded automatically on local startup. Avoid committing it.
+- Docker image includes the previously missing scoring/streak modules.
+
+WARNING: A clean copy starts with its own seed data. Do NOT overwrite your live project's data/store.json or data/uploads. Merge code changes into your existing deployed project with a backup.

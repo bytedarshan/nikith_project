@@ -1,0 +1,19 @@
+SAME SPOT V6 — UPGRADE IN PLACE (PASTE INTO ANTIGRAVITY AGENT CHAT)
+
+I have an existing SAME SPOT project that already has saved players, daily puzzles and an admin dashboard. I want to update that EXISTING project rather than replace its data. Please read its code and README first. Back up the project and its data directory before editing. Do not delete or reset player submissions or admin uploads.
+
+Fix gameplay:
+1. Every answer must go directly from Confirm to a NEW reveal slide with heatmap, animated 0–100 score, reward tier (Perfect Pulse/Nailed It/Pretty Close/Wild Card), stars/confetti for best guesses, +10 XP and Next Puzzle button. Never block this flow while awaiting player submissions.
+2. Until five genuine answers for THAT puzzle exist, score the tap immediately against editor-defined weighted hotspots and render an illustrative density heatmap. At five real answers, switch automatically to REAL aggregate tap coordinates. Threshold must be 5, not 50. Old per-day ranking threshold can remain 50 completed games.
+3. Important: do not describe estimated data as actual players. Keep the game slide clean with a small unobtrusive 'Estimated' marker before five real responses, and explain the details in How to Play. Never show a giant waiting notice. Do not award official crowd medals/ranks based on predictions.
+4. Preserve the existing one-tap-only rule, anonymous sessions, XP, badges, friend comparisons, 7-day streak shields, percentile ranking and API security.
+5. Show an unambiguous V6 build/version indication so I know I am not viewing an old server or browser cache. Stop the older local server before launching the new version.
+
+Fix admin /admin:
+1. Diagnose why saving and uploading puzzles fails. A known bug in V5: the hotspot sliders set weights from 1–10 while the backend rejected weights above 1. Allow relative weights 1–10 and normalize server-side.
+2. Provide a guided 'Create a new day's five puzzles' action: choose a full source day, choose a fresh future date, duplicate the five puzzles to NEW IDs, and allow editing each slot. Do not overwrite dates with player answers.
+3. Preserve PNG/JPG/WebP artwork upload; show image preview; enable adding 2–5 hotspots by tapping the preview; show validation errors directly under Save instead of a disappearing toast; show persistent success messages.
+4. Make local .env settings load correctly. Preserve secrets; do not commit .env or database files. Set MIN_CROWD=5 and keep ADMIN_PASSWORD private. If it has not been configured, guide me through setting it up.
+5. Test in a real browser with one test user and inspect backend logs. Test creating a new day, updating a priority slider, saving a custom image puzzle, playing a first-player estimated heatmap and switching to live heatmap after five real users.
+
+Do not rebuild the game from scratch. Tell me which existing files you changed and demonstrate working admin save and immediate reveal before calling the task complete.

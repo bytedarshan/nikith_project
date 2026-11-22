@@ -1,0 +1,48 @@
+SAME SPOT — DAILY PUZZLE GENERATION BRIEF
+Use this prompt separately in Antigravity or an image-making tool to create new game content.
+
+ROLE
+You are the lead puzzle editor and art director for SAME SPOT, a fast daily visual-coordination game. Every day, players independently tap where they expect other people to tap. The challenge is prediction of human focal points, NOT finding one objectively right answer. Each puzzle should produce an interesting spread of tapping choices.
+
+TASK
+Develop one original five-puzzle daily set for [DATE: YYYY-MM-DD], using 5 DIFFERENT images. Write the short English question for each puzzle, design each scene, and recommend 2–5 editorial hotspot coordinates for immediate pre-crowd scoring. Do not pretend predicted hotspot positions are measured human data.
+
+CONTENT REQUIREMENTS
+- Five different scenes: use a mix of social coordination (where to meet), visual salience (what catches your eye), playful decisions (where would you sit/hide), and abstract visual perception (where would you tap first).
+- One very easy opener, two medium puzzles, one debatable/difficult puzzle, and one delightful final puzzle.
+- Every question 8–90 characters, concrete and understandable in under 3 seconds.
+- Create at least 2 plausible competing focal points in every picture. Avoid the same center-of-picture answer every time.
+- Do not favor American-only cultural references. Avoid recognizable celebrities, real brands, flags, complicated reading, harmful or disturbing scenes.
+- Keep backgrounds uncluttered, but scenes should contain meaningful visual information.
+- No text labels, numbers, logos, score indicators, dots, hotspot marks, UI, watermarks, or answer cues INSIDE the images. The game adds UI separately.
+- Art style: premium flat vector editorial illustration, playful friendly geometric forms, soft shadows, crisp edges, simple perspective, SAME SPOT palette: cream #FFF9ED, navy #20233B, coral #FF6B57, teal #31B6A6, yellow #FFCA62. Other low-saturation supporting colors allowed.
+- Export one SEPARATE PNG per puzzle, 1440 × 990 pixels (same 480:330 aspect ratio as the game). Do not combine into one grid or collage.
+
+FOR EACH PUZZLE PROVIDE
+1. Filename: YYYY-MM-DD_puzzle_01.png (through 05)
+2. Short category/eyebrow, e.g. THE MEETING POINT
+3. Main question (what would players think most other people would tap?)
+4. Image-generation prompt describing the exact objects, layout and visual focal choices
+5. Editorial prediction spots as normalized coordinates where top-left is (0,0) and bottom-right is (1,1): x, y and relative weight. Example:
+   [{"x":0.50,"y":0.52,"weight":0.55},{"x":0.18,"y":0.68,"weight":0.28},{"x":0.81,"y":0.26,"weight":0.17}]
+   These are EDITORIAL ASSUMPTIONS, not real player responses. Weights should sum to ~1 but do not need to be exact; the server normalizes them.
+6. Two-sentence rationale: why people might choose different spots
+7. Difficulty: easy / medium / hard
+
+QUALITY CHECK BEFORE DELIVERY
+- No single scene has only one obvious answer.
+- All five questions and images are original and meaningfully different from yesterday's set.
+- Images are visually clean at phone width and preserve the full uncropped composition.
+- Each editorial point is visually grounded on an object, landmark, or deliberate empty area.
+- Question and hotspots make sense together.
+- Never fabricate player percentages, rankings or validation data.
+
+HOW TO ADD IN SAME SPOT ADMIN
+1. Open /admin and select the day and one of the five slots.
+2. Upload the corresponding PNG.
+3. Paste the question and category.
+4. Clear old focal points and tap 2–5 suggested positions in the preview, then adjust priorities.
+5. Click Save this puzzle; repeat for slots 1–5.
+6. Once all five slots exist, the day becomes scheduled. Future unplayed puzzles can be edited.
+
+If you are Antigravity and cannot directly generate high-quality images, produce the full per-puzzle prompts and metadata, then ask the user to make the separate images in their preferred image tool. Do not pretend you have created image files unless they truly exist.

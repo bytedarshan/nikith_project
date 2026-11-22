@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#faf7ee" />
+  <meta name="description" content="SAME SPOT — a tiny daily experiment in thinking like everyone else. One picture. One tap. Five rounds." />
+  <title>SAME SPOT · Are we thinking alike?</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/styles.css?v=6" />
+  <script type="module" src="/app.js?v=6" defer></script>
+</head>
+<body>
+  <div class="site-wrap">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Same Spot home"><span class="brand-logo"><span></span></span><span>SAME<span class="brand-highlight">SPOT</span></span></a>
+      <div class="top-right"><span class="top-today" id="todayLabel">A DAILY SOCIAL EXPERIMENT</span><button class="help-button" id="howButton" type="button" aria-label="How to play">?</button></div>
+    </header>
+    <main id="app" class="app" aria-live="polite">
+      <div class="loading-state"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span><p>Finding today's spot...</p></div>
+    </main>
+    <footer class="site-footer"><span>MADE FOR CURIOUS MINDS ✳</span><span>NO RIGHT ANSWERS. JUST PEOPLE. · V6</span></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
